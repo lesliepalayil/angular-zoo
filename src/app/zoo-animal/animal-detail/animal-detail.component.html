@@ -1,0 +1,5 @@
+<button (click)="goBack()">Back</button>
+<div *ngIf="animal != null">
+  <h2>{{animal.name}}</h2>
+  <input [(ngModel)]="animal.name" />
+</div>

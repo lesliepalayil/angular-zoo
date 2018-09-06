@@ -1,0 +1,15 @@
+<input #animalName /><button (click)="onAddAnimal(animalName.value)">Add New</button>
+<table class="table" border="1">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let animal of animals">
+			<td>{{animal.id}}</td>
+			<td><a routerLink="/animals/{{animal.id}}">{{animal.name}}</a></td>
+		</tr>
+	</tbody>
+</table>
